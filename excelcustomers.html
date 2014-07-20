@@ -1,0 +1,29 @@
+<head>
+  <title>Excel Dry Cleaners Customers List</title>
+</head>
+
+<body>
+  <div class="container">
+      {{> header}}
+      {{> customersList}}
+  </div>
+</body>
+
+<template name="header">
+  <h1>Excel Dry Cleaners</h1>
+  <h2> Customers List </h2>
+  <hr />
+</template>
+
+<template name="customersList">
+    <ul>
+        {{#each customer}}
+        <li>
+            <b>
+            {{firstname}} {{surname}}, {{email}}, {{telephone}}, {{address}}, {{postcode}}, ({{importance}})
+            </b>
+              {{comments}}
+        </li>
+        {{/each}}
+    </ul>
+</template>

@@ -1,0 +1,2 @@
+db.customers.insert({firstname:"Zulfikarali",surname:"Wasaya",email:"zul.wasaya@gmail.com",telephone:"01753887487",address:"17 Packhorse Road, Gerrards Cross",postcode:"SL9 7QA",importance: "9", comments:"comment for zul"});
+db.customers.insert({firstname:"Nimira",surname:"Wasaya",email:"nim.wasaya@gmail.com",telephone:"01753887487",address:"17 Packhorse Road, Gerrards Cross",postcode:"SL9 7QA",importance: "10", comments:"comment for nim"});
