@@ -5,7 +5,9 @@
 <body>
   <div class="container">
       {{> header}}
+      {{> newCustomer}}
       {{> customersList}}
+
   </div>
 </body>
 
@@ -13,17 +15,44 @@
   <h1>Excel Dry Cleaners</h1>
   <h2> Customers List </h2>
   <hr />
+  {{>loginButtons}}
+  <hr />
 </template>
 
 <template name="customersList">
+    {{#if currentUser}}
     <ul>
         {{#each customer}}
         <li>
             <b>
-            {{firstname}} {{surname}}, {{email}}, {{telephone}}, {{address}}, {{postcode}}, ({{importance}})
+            {{firstname}} {{surname}}, {{email}}, {{telephone}}, {{address}}, {{postcode}}, (Importance {{importance}})
             </b>
+            <br/>
               {{comments}}
+            <br/>
+            <input type="button" class="upimportance" value="Upimportance" />
+            <input type="button" class="downimportance" value="Downimportance" />
+
+            <hr />
         </li>
         {{/each}}
     </ul>
+    {{/if}}
+</template>
+
+<template name="newCustomer">
+    {{#if currentUser}}
+    <form class="form-inline newCustomerForm">
+        Firstname: <input type="text" class="firstname"/>
+        Surname: <input type="text" class="surname"/>
+        Email: <input type="text" class="email"/>
+        Telephone: <input type="text" class="telephone"/>
+        Address: <input type="text" class="address"/>
+        Postcode: <input type="text" class="postcode"/>
+        Importance: <input type="text" class="importance"/>
+        Comments: <input type="text" class="comments"/>
+        <input type="submit" value="Add new customer" />
+    </form>
+    <hr />
+    {{/if}}
 </template>
