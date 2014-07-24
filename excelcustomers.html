@@ -5,6 +5,7 @@
 <body>
   <div class="container">
       {{> header}}
+      {{> totalCustomers}}
       {{> newCustomer}}
       {{> customersList}}
 
@@ -22,6 +23,7 @@
 <template name="customersList">
     {{#if currentUser}}
     <ul>
+
         {{#each customer}}
         <li>
             <b>
@@ -38,6 +40,7 @@
         {{/each}}
     </ul>
     {{/if}}
+
 </template>
 
 <template name="newCustomer">
@@ -55,4 +58,17 @@
     </form>
     <hr />
     {{/if}}
+
 </template>
+
+<template name="totalCustomers">
+    {{#if currentUser}}
+
+    <hr />
+    <h2>Total number of customers in the database is {{totalNumber}} </h2>
+    <hr />
+
+    {{/if}}
+
+</template>
+

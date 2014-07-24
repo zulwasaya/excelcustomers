@@ -7,16 +7,26 @@ Meteor.methods({
            {$set: {importance: cust.importance + 1}});
    },
    downimportance: function (customerId) {
-        var cust = Customers.findOne(customerId);
-        Customers.update(customerId,
-            {$set: {importance: cust.importance - 1}});
-    }
+       var cust = Customers.findOne(customerId);
+       Customers.update(customerId,
+           {$set: {importance: cust.importance - 1}});
+   }
+
 });
 
 if (Meteor.isClient) {
     Meteor.subscribe("customers");
+
+
     Template.customersList.customer = function () {
         return Customers.find({}, {sort: {importance: -1 }});
+
+    };
+
+    Template.totalCustomers.totalNumber = function () {
+
+        return Customers.find().count();
+
 
     };
 
@@ -65,6 +75,7 @@ if (Meteor.isServer) {
         return Customers.find();
 
     });
+
 
     Customers.allow({
         insert: function (userId, customer){
