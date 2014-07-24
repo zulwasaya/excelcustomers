@@ -3,6 +3,8 @@ Customers = new Meteor.Collection("customers");
 Meteor.methods({
    upimportance: function (customerId) {
        var cust = Customers.findOne(customerId);
+
+
        Customers.update(customerId,
            {$set: {importance: cust.importance + 1}});
    },
@@ -36,7 +38,12 @@ if (Meteor.isClient) {
     },
         "click .downimportance": function () {
             Meteor.call("downimportance", this._id);
+    },
+        "click a.delete": function (e) {
+            e.preventDefault();
+            Customers.remove( this._id);
     }
+
   });
 
     Template.newCustomer.events ({
@@ -79,7 +86,11 @@ if (Meteor.isServer) {
 
     Customers.allow({
         insert: function (userId, customer){
-            return customer.importance < 10;
+            return customer.owner !== userId;
+        },
+        remove: function (userId, customer){
+            return customer.owner !== userId;
         }
+
     });
 }

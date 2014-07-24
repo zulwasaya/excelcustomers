@@ -22,23 +22,50 @@
 
 <template name="customersList">
     {{#if currentUser}}
-    <ul>
+
+    <table>
+        <tr>
+        <th>First name</th>
+        <th>Surname</th>
+        <th>Email</th>
+        <th>Telephone</th>
+        <th>Address</th>
+        <th>Postcode</th>
+        <th>Importance</th>
+        <th>Comments</th>
+        <th>Edit Importance</th>
+        <th></th>
+        </tr>
+
 
         {{#each customer}}
-        <li>
-            <b>
-            {{firstname}} {{surname}}, {{email}}, {{telephone}}, {{address}}, {{postcode}}, (Importance {{importance}})
-            </b>
-            <br/>
-              {{comments}}
-            <br/>
-            <input type="button" class="upimportance" value="Upimportance" />
-            <input type="button" class="downimportance" value="Downimportance" />
 
-            <hr />
-        </li>
+
+
+        <tr>
+            <td>{{firstname}}</td>
+            <td>{{surname}}</td>
+            <td>{{email}}</td>
+            <td>{{telephone}}</td>
+            <td>{{address}}</td>
+            <td>{{postcode}}</td>
+            <td>{{importance}}</td>
+            <td>{{comments}}</td>
+            <td>
+            <input type="button" class="upimportance" value="Up" />
+            <input type="button" class="downimportance" value="Down" />
+            </td>
+            <td> <a href="#" class="delete">Delete</a> </td>
+
+
+
+        </tr>
+
+        <hr />
+
         {{/each}}
-    </ul>
+    </table>
+
     {{/if}}
 
 </template>
@@ -54,7 +81,7 @@
         Postcode: <input type="text" class="postcode"/>
         Importance: <input type="text" class="importance"/>
         Comments: <input type="text" class="comments"/>
-        <input type="submit" value="Add new customer" />
+        <input type="submit" value="Add" />
     </form>
     <hr />
     {{/if}}
