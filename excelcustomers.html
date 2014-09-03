@@ -23,7 +23,7 @@
 <template name="customersList">
     {{#if currentUser}}
 
-    <table class="table table-striped table-bordered">
+    <table class="table table-bordered">
         <tr>
         <th>First name</th>
         <th>Surname</th>
@@ -34,7 +34,7 @@
         <th>Importance</th>
         <th>Comments</th>
         <th>Edit Importance</th>
-        <th class="td-actions"></th>
+        <th></th>
         </tr>
 
 
@@ -75,11 +75,15 @@
     <form class="form-inline newCustomerForm">
         Firstname: <input type="text" class="firstname"/>
         Surname: <input type="text" class="surname"/>
+        <br/>
         Email: <input type="text" class="email"/>
         Telephone: <input type="text" class="telephone"/>
+        <br/>
         Address: <input type="text" class="address"/>
         Postcode: <input type="text" class="postcode"/>
+        <br/>
         Importance: <input type="text" class="importance"/>
+        <br/>
         Comments: <input type="text" class="comments"/>
         <input type="submit" value="Add" />
     </form>

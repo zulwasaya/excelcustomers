@@ -6,12 +6,12 @@ Meteor.methods({
 
 
        Customers.update(customerId,
-           {$set: {importance: cust.importance + 1}});
+           {$set: {importance: cust.importance = parseInt(cust.importance +1) }});
    },
    downimportance: function (customerId) {
        var cust = Customers.findOne(customerId);
        Customers.update(customerId,
-           {$set: {importance: cust.importance - 1}});
+           {$set: {importance: cust.importance = parseInt(cust.importance -1) }});
    }
 
 });
