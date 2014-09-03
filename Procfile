@@ -1,2 +1,2 @@
-web: ./node_modules/.bin/forever -m 5 excelcustomers.js
+web: ./node_modules/.bin/meteor
 
