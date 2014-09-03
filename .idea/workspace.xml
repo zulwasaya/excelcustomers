@@ -301,7 +301,11 @@
       <created>1409717122846</created>
       <updated>1409717122846</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added package.json file">
+      <created>1409720208863</created>
+      <updated>1409720208863</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -349,7 +353,8 @@
     <MESSAGE value="edited README" />
     <MESSAGE value="added fibers to package" />
     <MESSAGE value="removed fibers from package" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed fibers from package" />
+    <MESSAGE value="added package.json file" />
+    <option name="LAST_COMMIT_MESSAGE" value="added package.json file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />

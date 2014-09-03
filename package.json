@@ -1,0 +1,29 @@
+{
+    "name": "excelcustomers",
+    "version": "0.0.1",
+    "description": "excel prototype app",
+    "main": "excelcustomers.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/zulwasaya/excelcustomers.git"
+    },
+    "author": "zul wasaya",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/zulwasaya/excelcustomers/issues"
+    },
+    "homepage": "https://github.com/zulwasaya/excelcustomers",
+
+    "engines": {
+      "node": "0.11.13",
+      "npm": "1.4.9"
+    },
+    "dependencies": {
+
+     "fibers": ">= 0.0.1"
+    }
+
+}
