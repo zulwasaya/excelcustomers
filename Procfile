@@ -1,2 +1,2 @@
-web: ./node_modules/.bin/meteor
+web: meteor
 
