@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="faa29839-22ea-44f4-b3d2-b73462fc3f1e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excelcustomers.css" afterPath="$PROJECT_DIR$/excelcustomers.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excelcustomers.html" afterPath="$PROJECT_DIR$/excelcustomers.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/excelcustomers.js" afterPath="$PROJECT_DIR$/excelcustomers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="excelcustomers.iws" />
@@ -286,7 +283,11 @@
       <created>1409758824298</created>
       <updated>1409758824298</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="corrected upimportance used parseInt to solve issue with + 1 treated as adding text string.">
+      <created>1409765251440</created>
+      <updated>1409765251440</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -340,7 +341,8 @@
     <MESSAGE value="removed Procfile file" />
     <MESSAGE value="Added table css definitions" />
     <MESSAGE value="used table css in html" />
-    <option name="LAST_COMMIT_MESSAGE" value="used table css in html" />
+    <MESSAGE value="corrected upimportance used parseInt to solve issue with + 1 treated as adding text string." />
+    <option name="LAST_COMMIT_MESSAGE" value="corrected upimportance used parseInt to solve issue with + 1 treated as adding text string." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
