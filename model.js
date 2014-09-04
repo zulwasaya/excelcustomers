@@ -6,14 +6,19 @@ Meteor.methods({
    upimportance: function (customerId) {
        var cust = Customers.findOne(customerId);
 
-
+       if (cust.importance < 9 )
+       {
        Customers.update(customerId,
            {$set: {importance: cust.importance = parseInt(cust.importance +1) }});
+       }
    },
    downimportance: function (customerId) {
        var cust = Customers.findOne(customerId);
-       Customers.update(customerId,
-           {$set: {importance: cust.importance = parseInt(cust.importance -1) }});
+       if (cust.importance > 1 )
+       {
+           Customers.update(customerId,
+               {$set: {importance: cust.importance = parseInt(cust.importance - 1) }});
+       }
    }
 
 });
@@ -52,6 +57,8 @@ if (Meteor.isClient) {
     Template.newCustomer.events ({
         "submit .newCustomerForm": function (evt) {
             evt.preventDefault();
+            var importanceLevel = $(".importance").val();
+            if (importanceLevel > 9 || importanceLevel < 1) {importanceLevel = 1}
             Customers.insert({
                 firstname: $(".firstname").val(),
                 surname: $(".surname").val(),
@@ -59,7 +66,7 @@ if (Meteor.isClient) {
                 telephone: $(".telephone").val(),
                 address: $(".address").val(),
                 postcode: $(".postcode").val(),
-                importance: $(".importance").val(),
+                importance: importanceLevel,
                 comments: $(".comments").val()
 
             }, function (err) {
