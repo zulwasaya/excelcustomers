@@ -1,5 +1,7 @@
 Customers = new Meteor.Collection("customers");
 
+if (Meteor.isClient) {
+
 Meteor.methods({
    upimportance: function (customerId) {
        var cust = Customers.findOne(customerId);
@@ -16,7 +18,7 @@ Meteor.methods({
 
 });
 
-if (Meteor.isClient) {
+
     Meteor.subscribe("customers");
 
 
