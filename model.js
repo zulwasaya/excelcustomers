@@ -1,6 +1,6 @@
 Customers = new Meteor.Collection("customers");
 
-if (Meteor.isClient) {
+
 
 Meteor.methods({
    upimportance: function (customerId) {
@@ -18,6 +18,7 @@ Meteor.methods({
 
 });
 
+if (Meteor.isClient) {
 
     Meteor.subscribe("customers");
 
